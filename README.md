@@ -29,7 +29,7 @@ Página única em HTML, CSS e JavaScript puros, publicada no GitHub Pages.</p>
 | Item | Definição |
 |---|---|
 | Endereço | https://bkservicoss.github.io |
-| Objetivo | Apresentar a BK, seus serviços, aplicativos, eventos e trajetória, e levar o visitante ao WhatsApp |
+| Objetivo | Apresentar a BK, seus serviços, aplicativos, e eventos, e levar o visitante ao WhatsApp |
 | Inspiração | Site do Moenda Café: montagem na rolagem, faixa em loop, contadores e chamadas constantes |
 | Tecnologia | Um único `index.html`, sem dependências nem etapa de compilação |
 | Contato principal | WhatsApp (27) 99807-5772, com mensagem pronta |
