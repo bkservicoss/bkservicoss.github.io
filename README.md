@@ -108,6 +108,7 @@ bkservicoss.github.io/
 │   └── simbolo_bk.webp         Símbolo BK do cabeçalho e ícone da aba
 ├── .nojekyll                   Publica sem processamento do Jekyll
 ├── .gitignore
+├── CLAUDE.md                   Regras do projeto para o Claude
 └── README.md
 ```
 
