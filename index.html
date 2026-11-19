@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BK Serviços, Produção &amp; Comunicação</title>
+<meta name="description" content="Produção audiovisual, eventos, jornalismo e tecnologia no Espírito Santo desde 2009. Do roteiro à edição, um só responsável.">
+<meta name="theme-color" content="#1A1A1A">
+<link rel="icon" href="assets/simbolo_bk.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;0,700;1,700;1,800&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+/* VOICE: como um bom repórter: direto, confiável e próximo; frases curtas, "a gente" e "você".
+   IDEA: um vídeo sendo produzido: roteiro, captação, edição e "no ar" se montam com a rolagem, como no Moenda.
+   PICTURE: no topo, quatro camadas da produção empilhadas: roteiro, visor REC, linha do tempo e celular ao vivo.
+   COLOUR and TYPE: manual BK: Laranja BK, Laranja Profundo, Âmbar, Grafite, Areia, Branco (60/25/15); Montserrat 800 itálico nos títulos, Inter no texto.
+   LAYOUT: hero grafite, faixa laranja em loop, Biko, frentes, processo, tecnologia (grafite), números (laranja), eventos, trajetória, contratar, contato, rodapé. */
+:root{color-scheme:light;--laranja:#E47800;--prof:#A85400;--ambar:#F0A83C;--dourado:#B09060;--grafite:#1A1A1A;--grafite2:#262626;--areia:#F5F1EB;--branco:#FFFFFF;--mut:#5C5650;--mutd:#B8B0A6;--linha:rgba(26,26,26,.12);--linhad:rgba(255,255,255,.12);
+--tit:"Montserrat",system-ui,sans-serif;--txt:"Inter",system-ui,sans-serif}
+:root[data-theme=light],:root[data-theme=dark]{color-scheme:light}
+*{box-sizing:border-box;min-width:0}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{margin:0;background:var(--areia);color:var(--grafite);font:17px/1.6 var(--txt);overflow-x:clip}
+a{color:inherit}img{display:block;max-width:100%}
+h1,h2,h3{font-family:var(--tit);font-style:italic;font-weight:800;line-height:1.05;letter-spacing:-.01em;text-wrap:balance;margin:0}
+h1{font-size:clamp(40px,min(5.6vw,8vh),78px)}
+h2{font-size:clamp(32px,4.2vw,54px)}
+h3{font-size:22px;font-weight:700}
+h1 span,h2 span{color:var(--prof)}
+.escuro h1 span,.escuro h2 span{color:var(--laranja)}
+p{margin:0}
+.wrap{max-width:1240px;margin:0 auto}
+.band{padding:clamp(56px,8vw,112px) max(5vw,18px)}
+.escuro{background:var(--grafite);color:var(--branco)}
+.branco{background:var(--branco)}
+.chapeu{font-family:var(--tit);font-weight:600;font-size:15px;color:var(--prof);margin-bottom:14px}
+.escuro .chapeu{color:var(--ambar)}
+.lead{font-size:19px;color:var(--mut);max-width:34em}
+.escuro .lead{color:var(--mutd)}
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:0 22px;border-radius:999px;font:700 16px var(--txt);text-decoration:none;border:2px solid var(--grafite);color:var(--grafite);transition:background .2s,color .2s,border-color .2s}
+.btn:hover{background:var(--grafite);color:var(--branco)}
+.btn.lar{background:var(--laranja);border-color:var(--laranja);color:var(--grafite)}
+.btn.lar:hover{background:var(--prof);border-color:var(--prof);color:var(--branco)}
+.escuro .btn:not(.lar){border-color:var(--branco);color:var(--branco)}
+.escuro .btn:not(.lar):hover{background:var(--branco);color:var(--grafite)}
+.btn svg{width:20px;height:20px;flex:none}
+.acoes{display:flex;gap:12px;flex-wrap:wrap}
+:focus-visible{outline:3px solid var(--ambar);outline-offset:3px;border-radius:6px}
+
+/* cabeçalho */
+.top{position:fixed;inset:0 0 auto;z-index:20;display:flex;align-items:center;gap:28px;padding:10px max(5vw,18px);background:rgba(26,26,26,.92);backdrop-filter:blur(10px);color:var(--branco)}
+.top .simb{width:58px;height:auto}
+.top nav{display:flex;gap:24px;margin-left:auto;flex-wrap:wrap}
+.top nav a{text-decoration:none;font-size:15px;color:var(--mutd)}
+.top nav a:hover{color:var(--branco)}
+.top .btn{min-height:42px;padding:0 18px;font-size:15px}
+.barra{position:absolute;left:0;bottom:0;height:3px;background:var(--laranja);width:0}
+
+/* hero com montagem */
+.hero{height:250vh;position:relative}
+.palco{position:sticky;top:0;height:100vh;min-height:640px;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:clamp(24px,4vw,64px);align-items:center;padding:110px max(5vw,18px) 36px;max-width:1340px;margin:0 auto}
+.hero .lead{margin:20px 0 28px}
+.dica{margin-top:26px;font-size:14px;color:var(--mutd);display:flex;gap:12px;align-items:center}
+.dica b{font:800 italic 24px var(--tit);color:var(--laranja);min-width:3.4ch}
+.pilha{position:relative;height:min(62vh,520px);margin-top:20px}
+.camada{position:absolute;left:50%;width:min(88%,410px);border-radius:16px;padding:16px 18px;box-shadow:0 30px 60px -28px rgba(0,0,0,.8);transform:translate(-50%,40px);opacity:0;transition:transform .55s cubic-bezier(.2,.8,.2,1),opacity .55s}
+.camada.on{opacity:1;transform:translate(-50%,0)}
+.rot{font:700 italic 13px var(--tit);margin-bottom:8px}
+.c1{top:0;background:var(--areia);color:var(--grafite);rotate:-3deg;margin-left:-40px;font-size:14px;line-height:1.5}
+.c1 .rot{color:var(--prof)}
+.c1 .vid{display:grid;grid-template-columns:4.2em 1fr;gap:4px 10px}
+.c1 .vid b{font-weight:700;color:var(--prof)}
+.c2{top:27%;background:#0E0E0E;color:var(--branco);padding:12px;rotate:2deg;margin-left:30px}
+.c2 .rot{color:var(--ambar);margin:2px 4px 8px}
+.visor{position:relative;height:120px;border-radius:10px;background:radial-gradient(circle at 70% 40%,#5A3A1A,#141414 70%);overflow:hidden}
+.visor::before{content:"";position:absolute;inset:12px;border:2px solid rgba(255,255,255,.55);clip-path:polygon(0 0,18% 0,18% 3px,3px 3px,3px 22%,0 22%,0 78%,3px 78%,3px calc(100% - 3px),18% calc(100% - 3px),18% 100%,82% 100%,82% calc(100% - 3px),calc(100% - 3px) calc(100% - 3px),calc(100% - 3px) 78%,100% 78%,100% 22%,calc(100% - 3px) 22%,calc(100% - 3px) 3px,82% 3px,82% 0,100% 0,100% 100%,0 100%)}
+.rec{position:absolute;left:22px;top:20px;font:700 13px var(--txt);display:flex;align-items:center;gap:6px}
+.rec::before{content:"";width:10px;height:10px;border-radius:50%;background:#E53935}
+.tc{position:absolute;right:22px;bottom:18px;font:500 13px var(--txt);font-variant-numeric:tabular-nums}
+.c3{top:56%;background:var(--grafite2);color:var(--branco);rotate:-1deg}
+.c3 .rot{color:var(--ambar)}
+.trilha{display:flex;gap:4px;height:22px;margin-top:6px}
+.trilha i{border-radius:4px;background:var(--laranja);flex:var(--f)}
+.trilha.a i{background:#4F7C8A}.trilha.m i{background:var(--dourado)}
+.cabeca-play{position:absolute;top:34px;bottom:14px;left:58%;width:2px;background:var(--branco)}
+.c4{top:auto;bottom:-10px;width:min(56%,220px);margin-left:120px;padding:10px;border-radius:28px;background:#0A0A0A;border:2px solid #3A3A3A}
+.tela{border-radius:20px;background:linear-gradient(170deg,#A85400,#1A1A1A 70%);padding:14px 12px 46px;color:var(--branco)}
+.vivo{display:inline-flex;align-items:center;gap:6px;background:#E53935;font:700 12px var(--txt);padding:3px 9px;border-radius:6px}
+.tela p{font:800 italic 20px/1.1 var(--tit);margin:58px 0 8px}
+.tela small{font-size:12px;color:#E8DDD0}
+
+/* faixa */
+.faixa{background:var(--laranja);color:var(--grafite);overflow:hidden;white-space:nowrap}
+.faixa div{display:inline-flex;gap:30px;padding:16px 0;animation:corre 42s linear infinite;font:800 italic 19px var(--tit)}
+.faixa span{display:inline-flex;align-items:center;gap:30px}
+.faixa span::after{content:"";width:22px;height:4px;background:var(--grafite);transform:skewX(-30deg)}
+@keyframes corre{to{transform:translateX(-50%)}}
+
+/* biko */
+.biko .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(28px,5vw,80px);align-items:start}
+.biko .texto p{font-size:19px;color:var(--mut);margin-bottom:18px;max-width:36em}
+.biko .texto p:first-child{font-size:24px;line-height:1.45;color:var(--grafite)}
+.assina{font:700 italic 18px var(--tit);color:var(--grafite)!important}
+.assina small{display:block;font:400 15px var(--txt);color:var(--mut)}
+
+/* frentes */
+.cabeca{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:40px}
+.cabeca .lead{max-width:28em;font-size:17px}
+.frentes{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.frente{background:var(--areia);border-radius:22px;padding:26px 22px 28px;display:flex;flex-direction:column;gap:12px;border-top:5px solid var(--laranja)}
+.frente svg{width:34px;height:34px;color:var(--prof)}
+.frente ul{margin:0;padding-left:18px;color:var(--mut);font-size:15px}
+.frente li{margin:5px 0}
+.frente .quem{margin-top:auto;font-size:14px;color:var(--prof);font-weight:500}
+
+/* processo */
+.passos{list-style:none;padding:0;margin:44px 0 0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;border-top:2px solid var(--grafite)}
+.passos li{padding:24px 22px 8px 0;position:relative}
+.passos li::before{content:"";position:absolute;top:-8px;left:0;width:14px;height:14px;border-radius:50%;background:var(--laranja)}
+.passos .n{font:800 italic 46px/1 var(--tit);color:var(--laranja);margin:8px 0 10px}
+.passos p{color:var(--mut);font-size:16px;margin-top:8px;max-width:22em}
+
+/* tecnologia */
+.apps{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.app{background:var(--grafite2);border:1px solid var(--linhad);border-radius:24px;overflow:hidden;display:flex;flex-direction:column}
+.app .vis{height:200px;position:relative;overflow:hidden;background:var(--cor)}
+.app .corpo{padding:22px 24px 26px;display:flex;flex-direction:column;gap:10px;flex:1}
+.app .meta{display:flex;justify-content:space-between;gap:12px;font-size:14px;color:var(--ambar);font-weight:500}
+.app p{color:var(--mutd);font-size:16px}
+.app.premio{border-color:var(--laranja)}
+.selo{align-self:flex-start;font:700 13px var(--txt);background:var(--laranja);color:var(--grafite);padding:4px 11px;border-radius:999px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto;padding-top:6px}
+.tags span{font-size:13px;padding:4px 11px;border-radius:999px;border:1px solid var(--linhad)}
+.m-fone{position:absolute;left:50%;top:22px;translate:-50% 0;width:136px;height:240px;border-radius:24px;background:#111;border:2px solid #3A3A3A;padding:12px 10px}
+.m-fone i{display:block;height:9px;border-radius:5px;background:#333;margin:8px 4px}
+.m-pulso{position:absolute;left:50%;top:50%;width:24px;height:24px;margin:-12px;border-radius:50%;background:var(--laranja)}
+.m-pulso::before,.m-pulso::after{content:"";position:absolute;inset:-28px;border-radius:50%;border:2px solid rgba(240,168,60,.55)}
+.m-pulso::after{inset:-56px;border-color:rgba(240,168,60,.25)}
+.m-disc{position:absolute;inset:24px 28px auto;height:200px;display:grid;grid-template-columns:48px 1fr;gap:10px}
+.m-disc .srv{display:grid;gap:8px;align-content:start}
+.m-disc .srv b{width:40px;height:40px;border-radius:13px;background:rgba(255,255,255,.22)}
+.m-disc .srv b:first-child{background:#fff}
+.m-disc .can{background:rgba(0,0,0,.22);border-radius:12px;padding:14px;display:grid;gap:8px;align-content:start}
+.m-disc .can i{height:9px;border-radius:5px;background:rgba(255,255,255,.55)}
+.m-disc .can i:nth-child(3n){width:62%;background:rgba(255,255,255,.3)}
+.m-perg{position:absolute;inset:24px 40px auto;height:200px;background:#EBDDC0;border-radius:6px;padding:20px;color:#4B1E25;font:700 italic 20px/1.25 var(--tit);rotate:-2deg;box-shadow:0 20px 40px -20px rgba(0,0,0,.6)}
+.m-perg small{display:block;font:400 13px var(--txt);margin-top:12px;color:#7A3A44}
+.m-feira{position:absolute;inset:26px 30px auto;height:190px;display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.m-feira b{border-radius:8px;background:rgba(255,255,255,.18)}
+.m-feira b:nth-child(3n){background:var(--grafite)}
+.m-feira b:nth-child(5){grid-column:span 2;background:#fff}
+.m-trofeu{position:absolute;right:26px;bottom:18px;width:54px;height:54px;border-radius:50%;background:var(--grafite);display:grid;place-items:center}
+
+/* números */
+.numeros{background:var(--laranja);color:var(--grafite)}
+.numeros .wrap{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}
+.numeros b{display:block;font:800 italic clamp(46px,6vw,78px)/1 var(--tit);font-variant-numeric:tabular-nums}
+.numeros span{display:block;margin-top:10px;font-size:16px;font-weight:500;max-width:15em}
+
+/* eventos */
+.eventos{display:grid;gap:0;border-top:1px solid var(--linha)}
+.evento{display:grid;grid-template-columns:150px minmax(0,1fr) minmax(0,.9fr);gap:24px;padding:24px 0;border-bottom:1px solid var(--linha);align-items:start}
+.evento .quando{font:800 italic 22px/1.1 var(--tit);color:var(--prof);white-space:nowrap}
+.evento .quando small{display:block;font:500 14px var(--txt);color:var(--mut);margin-top:6px;font-style:normal}
+.evento p{color:var(--mut);font-size:16px;margin-top:6px}
+.evento .papel{font-size:15px;color:var(--mut)}
+.evento.prox{background:var(--branco);border-radius:18px;padding:24px;border:2px solid var(--laranja);margin:12px 0}
+.evento.prox .quando{color:var(--laranja)}
+
+/* trajetória */
+.traj .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(28px,5vw,80px)}
+.linha-t{list-style:none;margin:0;padding:0}
+.linha-t li{display:grid;grid-template-columns:118px minmax(0,1fr);gap:18px;padding:16px 0;border-bottom:1px solid var(--linha)}
+.linha-t .ano{font-weight:700;color:var(--prof);white-space:nowrap;font-variant-numeric:tabular-nums}
+.linha-t b{display:block;font-family:var(--tit);font-weight:700}
+.linha-t span{color:var(--mut);font-size:15px}
+.formacao{margin-top:28px;display:grid;gap:12px}
+.formacao div{background:var(--areia);border-radius:14px;padding:14px 18px}
+.formacao b{font-family:var(--tit)}
+.formacao span{display:block;color:var(--mut);font-size:15px}
+
+/* contratar */
+.planos{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.plano{background:var(--branco);border-radius:24px;padding:30px 26px;display:flex;flex-direction:column;gap:14px;border:1px solid var(--linha)}
+.plano.dest{background:var(--grafite);color:var(--branco);border-color:var(--grafite)}
+.plano.dest p,.plano.dest li{color:var(--mutd)}
+.plano p{color:var(--mut)}
+.plano ul{margin:0;padding-left:18px;color:var(--mut);font-size:15px}
+.plano li{margin:5px 0}
+.plano .btn{margin-top:auto;align-self:flex-start}
+.plano.dest .btn:not(.lar){border-color:var(--branco);color:var(--branco)}
+
+/* contato */
+.contato .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,5vw,80px);align-items:start}
+.ficha{margin:0;background:var(--grafite2);border-radius:24px;padding:8px 26px}
+.ficha div{display:flex;justify-content:space-between;gap:18px;padding:18px 0;border-bottom:1px solid var(--linhad)}
+.ficha div:last-child{border:0}
+.ficha dt{color:var(--mutd)}.ficha dd{margin:0;text-align:right;font-weight:500;overflow-wrap:anywhere}
+.ficha a{text-decoration-color:var(--laranja);text-underline-offset:4px}
+
+/* rodapé */
+footer{background:var(--grafite);color:var(--branco);border-top:1px solid var(--linhad);padding:clamp(56px,8vw,100px) max(5vw,18px) 30px}
+footer .wrap{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:40px;align-items:center}
+footer h2{font-size:clamp(38px,6vw,80px);margin-bottom:28px}
+footer .logo{width:min(100%,360px);justify-self:end}
+.pe{grid-column:1/-1;display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-top:40px;padding-top:22px;border-top:1px solid var(--linhad);color:var(--mutd);font-size:14px}
+.pe nav{display:flex;gap:20px;flex-wrap:wrap}
+.pe a{text-decoration:none}.pe a:hover{color:var(--branco)}
+
+@media(max-width:1020px){
+ .top nav{display:none}.top .btn{margin-left:auto}
+ .frentes{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .planos{grid-template-columns:minmax(0,1fr)}
+ .numeros .wrap{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .passos{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:28px}
+}
+@media(max-width:780px){
+ .hero{height:auto}
+ .palco{position:relative;height:auto;grid-template-columns:minmax(0,1fr);padding-top:100px}
+ .pilha{height:560px}
+ .biko .wrap,.traj .wrap,.contato .wrap,.apps,footer .wrap{grid-template-columns:minmax(0,1fr)}
+ footer .logo{justify-self:start;width:300px}
+ .evento{grid-template-columns:minmax(0,1fr);gap:8px}
+ .c1{margin-left:-20px}.c2{margin-left:20px}.c4{margin-left:80px}
+}
+@media(max-width:520px){
+ .frentes,.passos{grid-template-columns:minmax(0,1fr)}
+ .top .btn span{display:none}
+ .linha-t li{grid-template-columns:minmax(0,1fr);gap:2px}
+ .pilha{height:540px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.faixa div{animation:none}.camada{transition:none}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <a href="#inicio" aria-label="BK Serviços, Produção e Comunicação: início"><img class="simb" src="assets/simbolo_bk.webp" alt="BK" width="58" height="32"></a>
+  <nav aria-label="Seções">
+    <a href="#servicos">Serviços</a>
+    <a href="#tecnologia">Tecnologia</a>
+    <a href="#eventos">Eventos</a>
+    <a href="#trajetoria">Trajetória</a>
+    <a href="#contato">Contato</a>
+  </nav>
+  <a class="btn lar" data-zap href="#contato"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1-.3.2-.5 0a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3a.5.5 0 0 0 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.4-.3Z"/></svg><span>Pedir orçamento</span></a>
+  <div class="barra" id="barra"></div>
+</header>
+
+<main id="inicio">
+<section class="hero escuro" id="hero">
+  <div class="palco">
+    <div>
+      <p class="chapeu">Desde 2009 contando histórias no Espírito Santo</p>
+      <h1>Sua história, <span>bem contada.</span></h1>
+      <p class="lead">Roteiro, gravação, edição, eventos ao vivo e aplicativos. Padrão de TV, velocidade de rede social, e um só responsável do começo ao fim.</p>
+      <div class="acoes">
+        <a class="btn lar" data-zap href="#contato">Chamar no WhatsApp</a>
+        <a class="btn" href="#servicos">Ver o que a gente faz</a>
+      </div>
+      <p class="dica" aria-live="polite"><b id="pct">0%</b> role para montar um vídeo</p>
+    </div>
+    <div class="pilha" aria-label="Um vídeo sendo produzido em quatro etapas">
+      <div class="camada c1" data-at="0"><div class="rot">1. Roteiro</div>
+        <div class="vid"><b>VÍDEO</b><span>Plano aberto da feira lotada.</span><b>ÁUDIO</b><span>"Em três dias, mil pessoas passaram por aqui."</span></div>
+      </div>
+      <div class="camada c2" data-at="0.3"><div class="rot">2. Captação</div>
+        <div class="visor"><span class="rec">REC</span><span class="tc" id="tc">00:00:12:08</span></div>
+      </div>
+      <div class="camada c3" data-at="0.55"><div class="rot">3. Edição</div>
+        <div class="trilha"><i style="--f:3"></i><i style="--f:2"></i><i style="--f:4"></i><i style="--f:1.5"></i></div>
+        <div class="trilha a"><i style="--f:6"></i><i style="--f:4"></i></div>
+        <div class="trilha m"><i style="--f:10"></i></div>
+        <span class="cabeca-play"></span>
+      </div>
+      <div class="camada c4" data-at="0.8"><div class="tela"><span class="vivo">AO VIVO</span><p>Cobertura especial</p><small>no ar agora</small></div></div>
+    </div>
+  </div>
+</section>
+
+<div class="faixa" aria-hidden="true"><div>
+  <span>Record News ES</span><span>BandNews FM ES</span><span>RedeTV ES</span><span>TV Faesa</span><span>Prêmio Inovação Tecnológica 2014</span><span>Pokémon Arena 2026</span><span>Inteligência artificial</span><span>Desde 2009</span>
+  <span>Record News ES</span><span>BandNews FM ES</span><span>RedeTV ES</span><span>TV Faesa</span><span>Prêmio Inovação Tecnológica 2014</span><span>Pokémon Arena 2026</span><span>Inteligência artificial</span><span>Desde 2009</span>
+</div></div>
+
+<section class="band biko" id="sobre">
+  <div class="wrap">
+    <div>
+      <p class="chapeu">Por que BK</p>
+      <h2>De Biko <span>a BK.</span></h2>
+    </div>
+    <div class="texto">
+      <p>BK vem de Biko, apelido de infância que ganhei do meu irmão mais novo. Saiu de casa, foi parar nas conversas com amigos e clientes, e virou a assinatura do meu trabalho.</p>
+      <p>A BK nasceu em 2009, em São Mateus (ES), da vontade de contar histórias em vídeo. Desde então passei por redações de TV e rádio, organizei feiras e torneios, ensinei edição e criei aplicativos. Hoje atendo a partir de Serra e Vitória.</p>
+      <p>O jeito de trabalhar veio do jornalismo: informação checada, roteiro claro e prazo cumprido. A tecnologia e a IA entram para produzir melhor e mais rápido.</p>
+      <p class="assina">Paulo Victor Leite<small>Jornalista e analista de sistemas, fundador da BK</small></p>
+    </div>
+  </div>
+</section>
+
+<section class="band branco" id="servicos">
+  <div class="wrap">
+    <div class="cabeca">
+      <div><p class="chapeu">O que a gente faz</p><h2>Quatro frentes, <span>um responsável.</span></h2></div>
+      <p class="lead">Você pode contratar o projeto inteiro ou só a etapa que falta na sua equipe.</p>
+    </div>
+    <div class="frentes">
+      <article class="frente">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="6" width="14" height="12" rx="2"/><path d="m16 10 6-3v10l-6-3"/></svg>
+        <h3>Produção audiovisual</h3>
+        <ul><li>Roteiros sob medida</li><li>Gravação em estúdio ou em campo</li><li>Edição, cor, áudio e motion</li><li>Reportagens e documentários</li><li>Séries de entrevistas</li></ul>
+        <p class="quem">Para marcas, produtoras e canais digitais</p>
+      </article>
+      <article class="frente">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M5 5a10 10 0 0 0 0 14M19 5a10 10 0 0 1 0 14M8 8a5 5 0 0 0 0 8M16 8a5 5 0 0 1 0 8"/></svg>
+        <h3>Eventos e ao vivo</h3>
+        <ul><li>Organização de eventos e torneios</li><li>Cobertura e reportagem</li><li>Livestream no YouTube e Twitch</li><li>Apresentação e ancoragem</li></ul>
+        <p class="quem">Para organizadores, feiras e instituições</p>
+      </article>
+      <article class="frente">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16v12H8l-4 4z"/><path d="M8 9h8M8 12h5"/></svg>
+        <h3>Comunicação e jornalismo</h3>
+        <ul><li>Assessoria de imprensa</li><li>Jornalismo sindical: matérias e boletins</li><li>Cobertura de assembleias</li><li>Estruturação de conteúdo</li></ul>
+        <p class="quem">Para empresas, sindicatos e órgãos públicos</p>
+      </article>
+      <article class="frente">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m8 7-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/></svg>
+        <h3>Tecnologia e ensino</h3>
+        <ul><li>Aplicativos e bots sob medida</li><li>Automação com IA e dados abertos</li><li>Treinamentos de IA</li><li>Aulas e mentorias de vídeo</li></ul>
+        <p class="quem">Para empresas, profissionais e escolas</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="processo">
+  <div class="wrap">
+    <p class="chapeu">Como funciona</p>
+    <h2>Do roteiro à edição. <span>Sem enrolação.</span></h2>
+    <ol class="passos">
+      <li><div class="n">1</div><h3>Conversa e pauta</h3><p>Você conta o que precisa pelo WhatsApp. A gente define público, formato e prazo.</p></li>
+      <li><div class="n">2</div><h3>Roteiro</h3><p>Texto, cenas e entrevistas planejados antes de ligar a câmera ou abrir o código.</p></li>
+      <li><div class="n">3</div><h3>Produção</h3><p>Gravação, edição e finalização, ou desenvolvimento e testes no caso de um app.</p></li>
+      <li><div class="n">4</div><h3>Entrega ou ao vivo</h3><p>Vídeo pronto para cada rede, transmissão no ar ou aplicativo funcionando.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="band escuro" id="tecnologia">
+  <div class="wrap">
+    <div class="cabeca">
+      <div><p class="chapeu">Tecnologia BK</p><h2>Aplicativos que <span>contam história.</span></h2></div>
+      <p class="lead">Analista de sistemas desde 2013, eu crio apps e bots com o mesmo cuidado de um roteiro: quem usa, o que precisa, e uma estreia que funciona.</p>
+    </div>
+    <div class="apps" id="apps"></div>
+  </div>
+</section>
+
+<section class="band numeros" aria-label="A BK em números">
+  <div class="wrap">
+    <div><b data-n="2009">0</b><span>primeiro trabalho em audiovisual</span></div>
+    <div><b data-n="15" data-pre="+">0</b><span>anos de comunicação</span></div>
+    <div><b data-n="4">0</b><span>veículos de imprensa no currículo</span></div>
+    <div><b data-n="2013">0</b><span>início na organização de eventos</span></div>
+  </div>
+</section>
+
+<section class="band" id="eventos">
+  <div class="wrap">
+    <div class="cabeca">
+      <div><p class="chapeu">Eventos organizados</p><h2>Da feira de ciência <span>ao torneio oficial.</span></h2></div>
+      <p class="lead">Organização em parceria com a Prisma Arena nos eventos para o público gamer e geek.</p>
+    </div>
+    <div class="eventos" id="lista-eventos"></div>
+  </div>
+</section>
+
+<section class="band branco traj" id="trajetoria">
+  <div class="wrap">
+    <div>
+      <p class="chapeu">Trajetória</p>
+      <h2>Ritmo de redação, <span>olhar de jornalista.</span></h2>
+      <p class="lead" style="margin-top:18px">Passagens por TV, rádio, assessoria e sala de aula. Tudo isso vira repertório no seu projeto.</p>
+      <div class="formacao">
+        <div><b>Jornalismo</b><span>Bacharelado em Comunicação Social, FAESA</span></div>
+        <div><b>Análise e Desenvolvimento de Sistemas</b><span>Curso superior de tecnologia, Multivix</span></div>
+      </div>
+    </div>
+    <ul class="linha-t" id="linha-t"></ul>
+  </div>
+</section>
+
+<section class="band" id="contratar">
+  <div class="wrap">
+    <div class="cabeca">
+      <div><p class="chapeu">Como contratar</p><h2>Do jeito que <span>você precisa.</span></h2></div>
+      <p class="lead">Todo projeto é orçado depois de uma conversa rápida. Sem pacote fechado que não serve.</p>
+    </div>
+    <div class="planos">
+      <div class="plano"><h3>Por etapa</h3><p>Para produtoras e agências que precisam de reforço.</p>
+        <ul><li>Roteiro, captação, edição ou apresentação</li><li>Atuação como parceiro da sua equipe</li></ul>
+        <a class="btn" data-zap href="#contato">Pedir orçamento</a></div>
+      <div class="plano dest"><span class="selo">Do roteiro à edição</span><h3>Projeto completo</h3><p>Para empresas, instituições e eventos.</p>
+        <ul><li>Planejamento, produção e entrega</li><li>Cobertura e transmissão ao vivo</li><li>Aplicativos e automações sob medida</li></ul>
+        <a class="btn lar" data-zap href="#contato">Pedir orçamento</a></div>
+      <div class="plano"><h3>Aulas e treinamentos</h3><p>Para profissionais, estudantes e equipes.</p>
+        <ul><li>Aulas particulares de vídeo e edição</li><li>Capacitação de equipes</li><li>Workshops de IA</li></ul>
+        <a class="btn" data-zap href="#contato">Quero aprender</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="band escuro contato" id="contato">
+  <div class="wrap">
+    <div>
+      <p class="chapeu">Contato</p>
+      <h2>Chama no WhatsApp e <span>receba seu orçamento hoje.</span></h2>
+      <p class="lead" style="margin-top:18px">Conte em poucas linhas o que você precisa. Quem responde é quem vai fazer o trabalho.</p>
+      <div class="acoes" style="margin-top:28px"><a class="btn lar" data-zap href="#contato">Chamar no WhatsApp</a></div>
+    </div>
+    <dl class="ficha">
+      <div><dt>WhatsApp</dt><dd><a data-zap href="#contato">(27) 99807-5772</a></dd></div>
+      <div><dt>E-mail</dt><dd><a href="mailto:bkservicoss@gmail.com">bkservicoss@gmail.com</a></dd></div>
+      <div><dt>Instagram</dt><dd><a href="https://www.instagram.com/bk.servicoss/">@bk.servicoss</a></dd></div>
+      <div><dt>LinkedIn</dt><dd><a href="https://www.linkedin.com/in/paulovictorleite/">paulovictorleite</a></dd></div>
+      <div><dt>Portfólio de vídeos</dt><dd><a href="https://portfolio-jornalista-z6lglv.webnode.page/nosso-trabalho/">Meus trabalhos</a></dd></div>
+      <div><dt>Base</dt><dd>Serra e Vitória/ES, presencial no ES e remoto</dd></div>
+    </dl>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <h2>Tem uma história <span style="color:var(--laranja)">pra contar?</span></h2>
+      <div class="acoes"><a class="btn lar" data-zap href="#contato">Chamar no WhatsApp</a><a class="btn" style="border-color:#fff;color:#fff" href="#servicos">Ver serviços</a></div>
+    </div>
+    <img class="logo" src="assets/logo_bk_completo.webp" alt="BK Serviços, Produção &amp; Comunicação" width="360" height="242">
+    <div class="pe">
+      <span>BK Serviços, Produção &amp; Comunicação · desde 2009</span>
+      <nav><a href="#servicos">Serviços</a><a href="#tecnologia">Tecnologia</a><a href="#eventos">Eventos</a><a href="#trajetoria">Trajetória</a><a href="https://www.instagram.com/bk.servicoss/">Instagram</a><a href="https://github.com/bkservicoss">GitHub</a></nav>
+    </div>
+  </div>
+</footer>
+
+<script>
+{
+  // WhatsApp com mensagem pronta
+  const zap = "https://wa.me/5527998075772?text=" + encodeURIComponent("Olá, BK! Vim pelo site e quero um orçamento.");
+  document.querySelectorAll('[data-zap]').forEach(a => { a.href = zap; a.target = "_blank"; a.rel = "noopener"; });
+
+  // Aplicativos: para incluir um novo, adicione um item nesta lista
+  const apps = [
+    {nome:"iLerta", tipo:"App mobile", ano:"2026", cor:"#2A2420", vis:'<div class="m-fone"><i></i><i style="width:60%"></i></div><div class="m-pulso"></div>',
+     txt:"Alerta inteligente: a loja programa anúncios e o cliente recebe quando está dentro do raio escolhido, de 1 a 10 km.", tags:["Flutter","Supabase","Android"]},
+    {nome:"dFAST", tipo:"Bot de Discord", ano:"2026", cor:"#5865F2", vis:'<div class="m-disc"><div class="srv"><b></b><b></b><b></b></div><div class="can"><i></i><i></i><i></i><i></i><i></i><i></i></div></div>',
+     txt:"Monta um servidor completo por modelo, com cargos, canais, permissões e atendimento por tickets, com um único comando.", tags:["Python","Discord"]},
+    {nome:"BK Storyworks", tipo:"Portal de encomendas", ano:"2026", cor:"#4B1E25", vis:'<div class="m-perg">Lore de personagem, família ou reino, sob encomenda.<small>encomende sua história</small></div>',
+     txt:"Portal para encomendar histórias: lore para qualquer cenário de Roleplay e roteiros de vídeo curtos, médios e longos.", tags:["Lore de RP","Roteiros de vídeo","Pix"]},
+    {nome:"App de gestão da Semana de C&T", tipo:"Gestão de eventos", ano:"2013 e 2014", cor:"#A85400", premio:true,
+     vis:'<div class="m-feira"><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b></div><div class="m-trofeu"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#F0A83C" stroke-width="2"><path d="M8 4h8v5a4 4 0 0 1-8 0zM8 6H5a3 3 0 0 0 3 4M16 6h3a3 3 0 0 1-3 4M12 13v4M8 20h8"/></svg></div>',
+     txt:"Sistema de gestão da Semana da Ciência, Tecnologia e Inovação de São Mateus. Venceu o Prêmio Inovação Tecnológica e foi apresentado no Latinoware 2014.", tags:["Gestão de feiras","Latinoware 2014"]}
+  ];
+  document.getElementById('apps').innerHTML = apps.map(a => `
+    <article class="app${a.premio ? ' premio' : ''}">
+      <div class="vis" style="--cor:${a.cor}" aria-hidden="true">${a.vis}</div>
+      <div class="corpo">
+        <div class="meta"><span>${a.tipo}</span><span>${a.ano}</span></div>
+        ${a.premio ? '<span class="selo">Prêmio Inovação Tecnológica</span>' : ''}
+        <h3>${a.nome}</h3><p>${a.txt}</p>
+        <div class="tags">${a.tags.map(t => `<span>${t}</span>`).join('')}</div>
+      </div>
+    </article>`).join('');
+
+  // Eventos
+  const eventos = [
+    {q:"20 e 21/11", a:"2026", nome:"Arena Card Game, Headscon XP 2026", local:"SESI Jardim da Penha, Vitória/ES", papel:"Torneios de Pokémon TCG, Digimon Card Game e One Piece Card Game, com a Prisma Arena.", prox:true},
+    {q:"28 a 30/08", a:"2026", nome:"Pokémon Arena, Pokémon Worlds 2026", local:"Prisma Arena, Vitória/ES", papel:"Três dias de oficinas TCG e VGC, torneios e transmissão do Mundial, com a Prisma Arena."},
+    {q:"2014 a 2017", a:"", nome:"Anime Dark", local:"Vitória/ES", papel:"Organização do evento: equipes, atrações, cronograma, divulgação e palco."},
+    {q:"2014", a:"", nome:"2ª Semana da Ciência, Tecnologia e Inovação", local:"São Mateus/ES", papel:"Organização e app de gestão premiado, apresentado no Latinoware 2014."},
+    {q:"2013", a:"", nome:"1ª Semana da Ciência, Tecnologia e Inovação", local:"São Mateus/ES", papel:"Organização e desenvolvimento do app de gestão da feira."}
+  ];
+  document.getElementById('lista-eventos').innerHTML = eventos.map(e => `
+    <div class="evento${e.prox ? ' prox' : ''}">
+      <div class="quando">${e.q}${e.a ? `<small>${e.a}${e.prox ? ', próximo evento' : ''}</small>` : ''}</div>
+      <div><h3>${e.nome}</h3><p>${e.local}</p></div>
+      <p class="papel">${e.papel}</p>
+    </div>`).join('');
+
+  // Trajetória
+  const traj = [
+    ["2025 a 2026","CRT-ES","Assessor"],
+    ["2023 a 2025","Creare Produção de Conteúdo","Jornalista multimídia, com foco sindical e empresarial"],
+    ["2022 a 2023","Escola START e Novotec (Gov. SP)","Professor das primeiras turmas de Produção Audiovisual"],
+    ["2020","Record News ES","Jornalista multimídia: reportagem, texto e edição"],
+    ["2019","Rádio BandNews FM ES","Jornalista multimídia: radiojornalismo e apresentação"],
+    ["2017 a 2018","FAESA e TV Faesa","Estúdio: edição, cinegrafia, pauta e programas"],
+    ["2012 a 2017","Dark Corporation","Coordenador de eventos"],
+    ["desde 2009","BK Serviços","Videomaker, editor e, desde 2022, professor de vídeo"]
+  ];
+  document.getElementById('linha-t').innerHTML = traj.map(t => `<li><span class="ano">${t[0]}</span><div><b>${t[1]}</b><span>${t[2]}</span></div></li>`).join('');
+
+  // Montagem conforme a rolagem
+  const hero = document.getElementById('hero');
+  const camadas = [...document.querySelectorAll('.camada')];
+  const pct = document.getElementById('pct'), barra = document.getElementById('barra'), tc = document.getElementById('tc');
+  const reduz = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const estreito = matchMedia('(max-width: 780px)');
+  const montar = () => {
+    const doc = document.documentElement;
+    barra.style.width = (doc.scrollTop / Math.max(1, doc.scrollHeight - innerHeight) * 100) + '%';
+    let p;
+    if (reduz) p = 1;
+    else if (estreito.matches) { const r = hero.getBoundingClientRect(); p = Math.min(1, Math.max(0, (innerHeight - r.top - 260) / r.height)); }
+    else p = Math.min(1, Math.max(0, -hero.getBoundingClientRect().top / ((hero.offsetHeight - innerHeight) * 0.85)));
+    camadas.forEach(c => c.classList.toggle('on', p >= +c.dataset.at));
+    pct.textContent = Math.round(p * 100) + '%';
+    const f = Math.round(p * 1500), s = Math.floor(f / 30);
+    tc.textContent = `00:00:${String(s % 60).padStart(2, '0')}:${String(f % 30).padStart(2, '0')}`;
+  };
+  addEventListener('scroll', montar, {passive:true});
+  addEventListener('resize', montar);
+  montar();
+
+  // Contadores
+  const contar = el => {
+    const alvo = +el.dataset.n, pre = el.dataset.pre || '';
+    if (reduz) { el.textContent = pre + alvo; return; }
+    const ini = alvo > 1000 ? alvo - 30 : 0, t0 = performance.now();
+    const passo = t => { const k = Math.min(1, (t - t0) / 1400), e = 1 - (1 - k) ** 3; el.textContent = pre + Math.round(ini + (alvo - ini) * e); if (k < 1) requestAnimationFrame(passo); };
+    requestAnimationFrame(passo);
+  };
+  const obsNumeros = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { contar(e.target); obsNumeros.unobserve(e.target); } }), {threshold:.6});
+  document.querySelectorAll('[data-n]').forEach(n => obsNumeros.observe(n));
+}
+</script>
+</body>
+</html>
