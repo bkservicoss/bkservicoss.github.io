@@ -15,7 +15,7 @@
    IDEA: um vídeo sendo produzido: roteiro, captação, edição e "no ar" se montam com a rolagem, como no Moenda.
    PICTURE: no topo, quatro camadas da produção empilhadas: roteiro, visor REC, linha do tempo e celular ao vivo.
    COLOUR and TYPE: manual BK: Laranja BK, Laranja Profundo, Âmbar, Grafite, Areia, Branco (60/25/15); Montserrat 800 itálico nos títulos, Inter no texto.
-   LAYOUT: hero grafite, faixa laranja em loop, Biko, frentes, processo, tecnologia (grafite), números (laranja), eventos, trajetória, contratar, contato, rodapé. */
+   LAYOUT: hero grafite, faixa laranja em loop, sobre a BK, frentes, processo, tecnologia (grafite), números (laranja), eventos, contratar, contato, rodapé. */
 :root{color-scheme:light;--laranja:#E47800;--prof:#A85400;--ambar:#F0A83C;--dourado:#B09060;--grafite:#1A1A1A;--grafite2:#262626;--areia:#F5F1EB;--branco:#FFFFFF;--mut:#5C5650;--mutd:#B8B0A6;--linha:rgba(26,26,26,.12);--linhad:rgba(255,255,255,.12);
 --tit:"Montserrat",system-ui,sans-serif;--txt:"Inter",system-ui,sans-serif}
 :root[data-theme=light],:root[data-theme=dark]{color-scheme:light}
@@ -101,8 +101,6 @@ p{margin:0}
 .biko .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(28px,5vw,80px);align-items:start}
 .biko .texto p{font-size:19px;color:var(--mut);margin-bottom:18px;max-width:36em}
 .biko .texto p:first-child{font-size:24px;line-height:1.45;color:var(--grafite)}
-.assina{font:700 italic 18px var(--tit);color:var(--grafite)!important}
-.assina small{display:block;font:400 15px var(--txt);color:var(--mut)}
 
 /* frentes */
 .cabeca{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:40px}
@@ -162,27 +160,19 @@ p{margin:0}
 .eventos{display:grid;gap:0;border-top:1px solid var(--linha)}
 .evento{display:grid;grid-template-columns:150px minmax(0,1fr) minmax(0,.9fr);gap:24px;padding:24px 0;border-bottom:1px solid var(--linha);align-items:start}
 .evento .quando{font:800 italic 22px/1.1 var(--tit);color:var(--prof);white-space:nowrap}
-.evento .quando small{display:block;font:500 14px var(--txt);color:var(--mut);margin-top:6px;font-style:normal}
+.evento .quando small{display:block;font:500 14px var(--txt);color:var(--mut);margin-top:6px;font-style:normal;white-space:normal}
 .evento p{color:var(--mut);font-size:16px;margin-top:6px}
 .evento .papel{font-size:15px;color:var(--mut)}
 .evento.prox{background:var(--branco);border-radius:18px;padding:24px;border:2px solid var(--laranja);margin:12px 0}
 .evento.prox .quando{color:var(--laranja)}
 
-/* trajetória */
-.traj .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(28px,5vw,80px)}
-.linha-t{list-style:none;margin:0;padding:0}
-.linha-t li{display:grid;grid-template-columns:118px minmax(0,1fr);gap:18px;padding:16px 0;border-bottom:1px solid var(--linha)}
-.linha-t .ano{font-weight:700;color:var(--prof);white-space:nowrap;font-variant-numeric:tabular-nums}
-.linha-t b{display:block;font-family:var(--tit);font-weight:700}
-.linha-t span{color:var(--mut);font-size:15px}
-.formacao{margin-top:28px;display:grid;gap:12px}
-.formacao div{background:var(--areia);border-radius:14px;padding:14px 18px}
-.formacao b{font-family:var(--tit)}
-.formacao span{display:block;color:var(--mut);font-size:15px}
+.dif{list-style:none;margin:8px 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:12px}
+.dif li{background:var(--branco);border-radius:16px;padding:16px 18px;font-size:15px;color:var(--mut);border-left:4px solid var(--laranja)}
+.dif b{display:block;font:700 italic 17px var(--tit);color:var(--grafite);margin-bottom:4px}
 
 /* contratar */
 .planos{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
-.plano{background:var(--branco);border-radius:24px;padding:30px 26px;display:flex;flex-direction:column;gap:14px;border:1px solid var(--linha)}
+.plano{background:var(--areia);border-radius:24px;padding:30px 26px;display:flex;flex-direction:column;gap:14px;border:1px solid var(--linha)}
 .plano.dest{background:var(--grafite);color:var(--branco);border-color:var(--grafite)}
 .plano.dest p,.plano.dest li{color:var(--mutd)}
 .plano p{color:var(--mut)}
@@ -219,7 +209,7 @@ footer .logo{width:min(100%,360px);justify-self:end}
  .hero{height:auto}
  .palco{position:relative;height:auto;grid-template-columns:minmax(0,1fr);padding-top:100px}
  .pilha{height:560px}
- .biko .wrap,.traj .wrap,.contato .wrap,.apps,footer .wrap{grid-template-columns:minmax(0,1fr)}
+ .biko .wrap,.contato .wrap,.apps,footer .wrap{grid-template-columns:minmax(0,1fr)}
  footer .logo{justify-self:start;width:300px}
  .evento{grid-template-columns:minmax(0,1fr);gap:8px}
  .c1{margin-left:-20px}.c2{margin-left:20px}.c4{margin-left:80px}
@@ -227,7 +217,6 @@ footer .logo{width:min(100%,360px);justify-self:end}
 @media(max-width:520px){
  .frentes,.passos{grid-template-columns:minmax(0,1fr)}
  .top .btn span{display:none}
- .linha-t li{grid-template-columns:minmax(0,1fr);gap:2px}
  .pilha{height:540px}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.faixa div{animation:none}.camada{transition:none}}
@@ -241,7 +230,6 @@ footer .logo{width:min(100%,360px);justify-self:end}
     <a href="#servicos">Serviços</a>
     <a href="#tecnologia">Tecnologia</a>
     <a href="#eventos">Eventos</a>
-    <a href="#trajetoria">Trajetória</a>
     <a href="#contato">Contato</a>
   </nav>
   <a class="btn lar" data-zap href="#contato"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1-.3.2-.5 0a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3a.5.5 0 0 0 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.4-.3Z"/></svg><span>Pedir orçamento</span></a>
@@ -287,14 +275,19 @@ footer .logo{width:min(100%,360px);justify-self:end}
 <section class="band biko" id="sobre">
   <div class="wrap">
     <div>
-      <p class="chapeu">Por que BK</p>
-      <h2>De Biko <span>a BK.</span></h2>
+      <p class="chapeu">Sobre a BK</p>
+      <h2>Jornalismo, eventos <span>e tecnologia.</span></h2>
     </div>
     <div class="texto">
-      <p>BK vem de Biko, apelido de infância que ganhei do meu irmão mais novo. Saiu de casa, foi parar nas conversas com amigos e clientes, e virou a assinatura do meu trabalho.</p>
-      <p>A BK nasceu em 2009, em São Mateus (ES), da vontade de contar histórias em vídeo. Desde então passei por redações de TV e rádio, organizei feiras e torneios, ensinei edição e criei aplicativos. Hoje atendo a partir de Serra e Vitória.</p>
-      <p>O jeito de trabalhar veio do jornalismo: informação checada, roteiro claro e prazo cumprido. A tecnologia e a IA entram para produzir melhor e mais rápido.</p>
-      <p class="assina">Paulo Victor Leite<small>Jornalista e analista de sistemas, fundador da BK</small></p>
+      <p>A BK Serviços, Produção &amp; Comunicação é uma produtora de conteúdo audiovisual do Espírito Santo, ativa desde 2009.</p>
+      <p>A gente une a precisão do jornalismo de TV à agilidade da produção digital e ao uso de inteligência artificial, para marcas, instituições e eventos.</p>
+      <ul class="dif">
+        <li><b>Olhar de jornalista</b>Roteiro claro, informação checada e entrevista bem conduzida.</li>
+        <li><b>Ritmo de redação</b>Edição rápida e cobertura ao vivo.</li>
+        <li><b>Tecnologia</b>IA para acelerar roteiro, edição e automações.</li>
+        <li><b>Ponta a ponta</b>Um só responsável, do planejamento à entrega.</li>
+        <li><b>Presença de câmera</b>A BK também apresenta e conduz entrevistas.</li>
+      </ul>
     </div>
   </div>
 </section>
@@ -351,7 +344,7 @@ footer .logo{width:min(100%,360px);justify-self:end}
   <div class="wrap">
     <div class="cabeca">
       <div><p class="chapeu">Tecnologia BK</p><h2>Aplicativos que <span>contam história.</span></h2></div>
-      <p class="lead">Analista de sistemas desde 2013, eu crio apps e bots com o mesmo cuidado de um roteiro: quem usa, o que precisa, e uma estreia que funciona.</p>
+      <p class="lead">Desde 2013 a BK desenvolve aplicativos, bots e automações com o mesmo cuidado de um roteiro: quem usa, o que precisa e uma estreia que funciona.</p>
     </div>
     <div class="apps" id="apps"></div>
   </div>
@@ -376,22 +369,7 @@ footer .logo{width:min(100%,360px);justify-self:end}
   </div>
 </section>
 
-<section class="band branco traj" id="trajetoria">
-  <div class="wrap">
-    <div>
-      <p class="chapeu">Trajetória</p>
-      <h2>Ritmo de redação, <span>olhar de jornalista.</span></h2>
-      <p class="lead" style="margin-top:18px">Passagens por TV, rádio, assessoria e sala de aula. Tudo isso vira repertório no seu projeto.</p>
-      <div class="formacao">
-        <div><b>Jornalismo</b><span>Bacharelado em Comunicação Social, FAESA</span></div>
-        <div><b>Análise e Desenvolvimento de Sistemas</b><span>Curso superior de tecnologia, Multivix</span></div>
-      </div>
-    </div>
-    <ul class="linha-t" id="linha-t"></ul>
-  </div>
-</section>
-
-<section class="band" id="contratar">
+<section class="band branco" id="contratar">
   <div class="wrap">
     <div class="cabeca">
       <div><p class="chapeu">Como contratar</p><h2>Do jeito que <span>você precisa.</span></h2></div>
@@ -423,9 +401,8 @@ footer .logo{width:min(100%,360px);justify-self:end}
       <div><dt>WhatsApp</dt><dd><a data-zap href="#contato">(27) 99807-5772</a></dd></div>
       <div><dt>E-mail</dt><dd><a href="mailto:bkservicoss@gmail.com">bkservicoss@gmail.com</a></dd></div>
       <div><dt>Instagram</dt><dd><a href="https://www.instagram.com/bk.servicoss/">@bk.servicoss</a></dd></div>
-      <div><dt>LinkedIn</dt><dd><a href="https://www.linkedin.com/in/paulovictorleite/">paulovictorleite</a></dd></div>
-      <div><dt>Portfólio de vídeos</dt><dd><a href="https://portfolio-jornalista-z6lglv.webnode.page/nosso-trabalho/">Meus trabalhos</a></dd></div>
-      <div><dt>Base</dt><dd>Serra e Vitória/ES, presencial no ES e remoto</dd></div>
+      <div><dt>Trabalhos em vídeo</dt><dd><a href="https://portfolio-jornalista-z6lglv.webnode.page/nosso-trabalho/">Ver portfólio</a></dd></div>
+      <div><dt>Atendimento</dt><dd>Grande Vitória/ES, presencial e remoto</dd></div>
     </dl>
   </div>
 </section>
@@ -440,7 +417,7 @@ footer .logo{width:min(100%,360px);justify-self:end}
     <img class="logo" src="assets/logo_bk_completo.webp" alt="BK Serviços, Produção &amp; Comunicação" width="360" height="242">
     <div class="pe">
       <span>BK Serviços, Produção &amp; Comunicação · desde 2009</span>
-      <nav><a href="#servicos">Serviços</a><a href="#tecnologia">Tecnologia</a><a href="#eventos">Eventos</a><a href="#trajetoria">Trajetória</a><a href="https://www.instagram.com/bk.servicoss/">Instagram</a><a href="https://github.com/bkservicoss">GitHub</a></nav>
+      <nav><a href="#servicos">Serviços</a><a href="#tecnologia">Tecnologia</a><a href="#eventos">Eventos</a><a href="https://www.instagram.com/bk.servicoss/">Instagram</a><a href="https://github.com/bkservicoss">GitHub</a></nav>
     </div>
   </div>
 </footer>
@@ -484,23 +461,11 @@ footer .logo{width:min(100%,360px);justify-self:end}
   ];
   document.getElementById('lista-eventos').innerHTML = eventos.map(e => `
     <div class="evento${e.prox ? ' prox' : ''}">
-      <div class="quando">${e.q}${e.a ? `<small>${e.a}${e.prox ? ', próximo evento' : ''}</small>` : ''}</div>
+      <div class="quando">${e.q}${e.a ? `<small>${e.a}${e.prox ? ', venha conhecer a BK' : ''}</small>` : ''}</div>
       <div><h3>${e.nome}</h3><p>${e.local}</p></div>
       <p class="papel">${e.papel}</p>
     </div>`).join('');
 
-  // Trajetória
-  const traj = [
-    ["2025 a 2026","CRT-ES","Assessor"],
-    ["2023 a 2025","Creare Produção de Conteúdo","Jornalista multimídia, com foco sindical e empresarial"],
-    ["2022 a 2023","Escola START e Novotec (Gov. SP)","Professor das primeiras turmas de Produção Audiovisual"],
-    ["2020","Record News ES","Jornalista multimídia: reportagem, texto e edição"],
-    ["2019","Rádio BandNews FM ES","Jornalista multimídia: radiojornalismo e apresentação"],
-    ["2017 a 2018","FAESA e TV Faesa","Estúdio: edição, cinegrafia, pauta e programas"],
-    ["2012 a 2017","Dark Corporation","Coordenador de eventos"],
-    ["desde 2009","BK Serviços","Videomaker, editor e, desde 2022, professor de vídeo"]
-  ];
-  document.getElementById('linha-t').innerHTML = traj.map(t => `<li><span class="ano">${t[0]}</span><div><b>${t[1]}</b><span>${t[2]}</span></div></li>`).join('');
 
   // Montagem conforme a rolagem
   const hero = document.getElementById('hero');

@@ -49,15 +49,14 @@ Página única em HTML, CSS e JavaScript puros, publicada no GitHub Pages.</p>
 |---|---|
 | Hero | "Sua história, bem contada." e um vídeo que se monta com a rolagem: roteiro, captação, edição e ao vivo |
 | Faixa | Veículos e marcos em loop: Record News ES, BandNews FM ES, RedeTV ES, TV Faesa, Prêmio 2014 |
-| De Biko a BK | História do nome e do fundador |
+| Sobre a BK | Apresentação institucional e os cinco diferenciais do manual |
 | Quatro frentes | Audiovisual, eventos e ao vivo, comunicação e jornalismo, tecnologia e ensino |
 | Como funciona | Processo em quatro passos |
 | Tecnologia | iLerta, dFAST, BK Storyworks e o app premiado da Semana de C&T |
 | Números | Contadores animados |
 | Eventos | Headscon XP 2026, Pokémon Arena 2026, Anime Dark e Semanas de C&T |
-| Trajetória | Experiências e formação |
 | Como contratar | Por etapa, projeto completo, aulas e treinamentos (sem preços) |
-| Contato e rodapé | WhatsApp, e-mail, Instagram, LinkedIn e portfólio de vídeos |
+| Contato e rodapé | WhatsApp, e-mail, Instagram e portfólio de vídeos |
 
 ## Identidade visual
 
@@ -87,7 +86,6 @@ Tudo é editado pelo navegador, sem instalar nada:
 |---|---|
 | Aplicativos | Lista `const apps = [...]` no fim do arquivo |
 | Eventos | Lista `const eventos = [...]` |
-| Trajetória | Lista `const traj = [...]` |
 | Número e mensagem do WhatsApp | Linha `const zap = ...` |
 | Textos das seções | No HTML de cada seção (`id="sobre"`, `id="servicos"`, etc.) |
 
@@ -117,7 +115,7 @@ bkservicoss.github.io/
 | Regra | Como é aplicada |
 |---|---|
 | Sem segredos no repositório | O site não usa chaves, tokens nem senhas |
-| Dados pessoais | Só contatos profissionais; o endereço residencial não aparece |
+| Dados pessoais | Tom institucional: sem história pessoal, trajetória individual ou endereço; só canais profissionais |
 | Links externos | Abrem em nova aba com `rel="noopener"` |
 
 ## Pendências

@@ -16,7 +16,6 @@ Site oficial da BK Serviços, Produção & Comunicação, publicado em https://b
 ## Conteúdo editável (no fim do `index.html`)
 - `const apps`: aplicativos da seção Tecnologia.
 - `const eventos`: eventos organizados (o item com `prox:true` fica em destaque).
-- `const traj`: trajetória profissional.
 - `const zap`: número e mensagem pronta do WhatsApp (27) 99807-5772.
 
 ## Marca (Manual e Análise de Marca da BK)
@@ -29,7 +28,7 @@ Site oficial da BK Serviços, Produção & Comunicação, publicado em https://b
 
 ## Regras
 - Inspiração de layout: site do Moenda Café (montagem na rolagem, faixa em loop, contadores, chamadas constantes para o WhatsApp).
-- Não publicar endereço residencial; só "Serra e Vitória/ES".
+- Tom institucional e profissional: sem história pessoal, trajetória individual, LinkedIn pessoal ou endereço. Atendimento: "Grande Vitória/ES, presencial e remoto".
 - Não inventar depoimentos, clientes ou números. Fatos vêm do manual, do currículo e do portfólio do dono.
 - Nunca guardar segredos, tokens ou senhas no repositório.
 - Respeitar `prefers-reduced-motion` e testar em 390 px de largura.
